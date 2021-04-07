@@ -9,7 +9,7 @@ export default {
   name: 'About',
   data () {
     return {
-      msg: 'About page'
+      msg: 'About page being written'
     }
   }
 }

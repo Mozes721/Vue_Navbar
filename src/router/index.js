@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import About from '@/components/About'
 import Contacts from '@/components/Contacts'
 
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -21,7 +22,7 @@ export default new Router({
       path: '/contacts',
       name: 'Contacts',
       component: Contacts
-    }
+    },
   ],
   mode: 'history'
 })

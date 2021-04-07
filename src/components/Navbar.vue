@@ -3,38 +3,38 @@
         <div class="menu-item"><router-link to="/">Home</router-link></div>
         <div class="menu-item"><router-link to="/about">About</router-link></div>
         <div class="menu-item"><router-link to="/contacts">Contact</router-link></div>
-        <Dropdown title="Services" :items="services" />
+        <Services title="Services" :items="services"/> 
     </nav>
 </template>
 
 <script>
-
-import Dropdown from '../components/Dropdown'
+import Services from '../components/Services'
 import Web from '@/components/Dropdown_folder/Web'
 import Design from '@/components/Dropdown_folder/Design'
 import Videos from '@/components/Dropdown_folder/Videos'
 
+
 export default {
   name: 'navbar',
   components: {
-    Dropdown
+    Services
   },
   data () {
     return {
       services: [
         {
-          title: 'Web',
           path: '/web',
+          name: 'Web',
           components: Web
         },
         {
-          title: 'Design',
           path: '/design',
+          name: 'Design',
           components: Design
         },
         {
-          title: 'Videos',
           path: '/videos',
+          name: 'Videos',
           components: Videos
         }
       ],
@@ -42,8 +42,8 @@ export default {
     }
   }
 }
-</script>
 
+</script>
 <style>
 
 nav {

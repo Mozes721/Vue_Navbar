@@ -9,7 +9,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Hello Compone'
+      msg: 'Hello Component'
     }
   }
 }

@@ -8,23 +8,30 @@
         </svg>
         <transition name="fade" apear>
          <div class="sub-menu" v-if="isOpen">
-            <div v-for="(item, i) in items" :key="i" class="menu-item">
-                <a :href="item.path" v-on:click= "text">{{ item.title }} </a>
+            <div v-for="route in route" v-bind:key="route.path" :to="route.path" class="menu-item">
+                <!-- <router-link :to="{path:item.path}">{{item.name}}</router-link> -->
+                {{router.name}}
             </div>
         </div>
         </transition>
     </div>
 </template>
+
+
+
 <script>
+
 export default {
-  name: 'dropdown',
-  props: ['title', 'items'],
+  name: 'services',
+  props: ['title', 'path', 'name'],
   data () {
     return {
-      isOpen: false
+      isOpen: false,
+      }
     }
-  }
 }
+
+
 </script>
 
 <style>
