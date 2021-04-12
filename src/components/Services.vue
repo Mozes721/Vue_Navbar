@@ -1,37 +1,38 @@
 <template>
     <div class="menu-item" @click="isOpen = !isOpen" >
         <a href ='#'>
-            {{ title }}
+            Services
         </a>
         <svg viewBox="0 0 1030 638" width="10">
             <path d="M1017 68L541 626q-11 12-26 12t-26-12L13 68Q-3 49 6 24.5T39 0h952q24 0 33 24.5t-7 43.5z" fill="#FFF"></path>
         </svg>
         <transition name="fade" apear>
          <div class="sub-menu" v-if="isOpen">
-            <div v-for="route in route" v-bind:key="route.path" :to="route.path" class="menu-item">
-                <!-- <router-link :to="{path:item.path}">{{item.name}}</router-link> -->
-                {{router.name}}
+            <div class="menu-item">
+              <router-link to="/services/web">Web</router-link>
+            </div>
+            <div class="menu-item">
+              <router-link to="/services/design">Design</router-link>
+            </div>
+            <div class="menu-item">
+              <router-link to="/services/videos">Videos</router-link>
             </div>
         </div>
         </transition>
     </div>
 </template>
 
-
-
 <script>
 
 export default {
   name: 'services',
-  props: ['title', 'path', 'name'],
+  props: 'title',
   data () {
     return {
       isOpen: false,
       }
     }
 }
-
-
 </script>
 
 <style>
@@ -39,7 +40,6 @@ nav .menu-item svg {
     width: 10px;
     margin-left: 10px;
 }
-
 nav .menu-item .sub-menu {
   position: absolute;
   background-color: #222;
@@ -49,7 +49,6 @@ nav .menu-item .sub-menu {
   width: max-content;
   border-radius: 0px 0px 16px 16px;
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition: all .5s ease-out;
@@ -58,7 +57,6 @@ nav .menu-item .sub-menu {
 .fade-leave-to {
   opacity: 0;
 }
-
 .sub-menu {
   cursor: pointer;
 }
