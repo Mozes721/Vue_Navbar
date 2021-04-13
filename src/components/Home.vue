@@ -23,7 +23,6 @@ h1, h2 {
   font-weight: bold;
 }
 ul {
-  list-style-type: none;
   padding: 0;
 }
 li {

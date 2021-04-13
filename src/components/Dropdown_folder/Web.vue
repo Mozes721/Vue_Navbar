@@ -1,6 +1,15 @@
 <template>
   <div>
+    <h1>World Wide Web</h1>
+
    <p>{{ msg }}</p>
+
+  <ul class="list">
+      <li>World</li>
+      <li>Wide</li>
+      <li>Web</li>
+  </ul>  
+
   </div>
 </template>
 
@@ -19,16 +28,16 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+  margin: 20px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.list {
+  align-items: left;
 }
+
 li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+    font-size: 22px;
+    margin-left: 10px;
+    list-style: circle;
+ }
+
 </style>
